@@ -1,1 +1,1 @@
-# chgov-brprotokolle-ocr-plugin
+# chgov-brprotokolle-ocr
