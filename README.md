@@ -75,17 +75,13 @@ serve demo/dist
 | `correction.emailRecipient` | Email address used as `to` parameter for `mailto` link | `string `/ `null` | `null` |
 | `correction.emailUrlKeepParams` | Defines which existing url parameters need to be kept when generating the the entry url | array | [] |
 
-## Run tests
-
-## Execute
-
 # Authors
 
 - [4eyes GmbH](https://www.4eyes.ch)
 
 # License
 
-The MIT License (MIT), see [LICENSE](LICENSE.TXT)
+GNU Affero General Public License (AGPLv3), see [LICENSE](LICENSE)
 
 # Contribute
 
