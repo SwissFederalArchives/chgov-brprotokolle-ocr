@@ -4,7 +4,7 @@
   - [chgov-brprotokolle-server](https://github.com/SwissFederalArchives/chgov-brprotokolle-server)
   - [chgov-brprotokolle-markdown](https://github.com/SwissFederalArchives/chgov-brprotokolle-markdown)
   - [chgov-brprotokolle-frontend](https://github.com/SwissFederalArchives/chgov-brprotokolle-frontend)
-  - **[chgov-brprotokolle-mirador-ocr-helper](https://github.com/SwissFederalArchives/chgov-brprotokolle-mirador-ocr-helper)** :triangular_flag_on_post:
+  - **[chgov-brprotokolle-ocr](https://github.com/SwissFederalArchives/chgov-brprotokolle-ocr)** :triangular_flag_on_post:
 
 # Context
 
