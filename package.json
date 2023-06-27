@@ -1,6 +1,6 @@
 {
   "name": "@4eyes/mirador-ocr-helper",
-  "version": "1.2.2",
+  "version": "2.0.1",
   "description": "Mirador 3 plugin which renders a separate window, with OCR text",
   "main": "dist/index.js",
   "scripts": {
@@ -9,8 +9,8 @@
     "start": "webpack-dev-server --mode development --open",
     "lint": "eslint ./src ./__tests__",
     "format": "eslint --fix ./src ./__tests__",
-    "prepublishOnly": "npm run build",
-    "test": "npm run lint"
+    "prepublishOnly": "yarn build",
+    "test": "yarn lint"
   },
   "peerDependencies": {
     "@material-ui/core": "^4.11.4",
@@ -38,7 +38,7 @@
     "babel-loader": "^9.1.2",
     "canvas": "^2.6.1",
     "css-loader": "^6.8.1",
-    "eslint": "^6.8.0",
+    "eslint": "^8.43.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-config-react-app": "^5.2.1",
@@ -61,6 +61,11 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1",
     "webpack-node-externals": "^3.0.0"
+  },
+  "resolutions": {
+    "semver": "7.5.3",
+    "**/@babel/core/**/semver": "7.5.3",
+    "**/@babel/preset-env/**/semver": "7.5.3"
   },
   "author": "Alessandro Bellafronte",
   "license": "MIT",
