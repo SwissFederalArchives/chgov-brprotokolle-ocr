@@ -2,7 +2,7 @@ import Mirador from 'mirador/dist/es/src/index';
 import ocrHelperPlugin from '../../src';
 
 const viewerConfig = {
-  id: 'demo',
+  id: 'root',
   workspace: {
     allowNewWindows: false,
     isWorkspaceAddVisible: false,
