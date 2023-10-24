@@ -290,7 +290,7 @@ class WindowViewer extends Component {
                     (line.width > 0 && line.height > 0 && line.text.trim().length > 0);
                   return (
                     showLine && (
-                      <p
+                      <div
                         ref={(ref) => {
                           this.lineRefs[index] = ref;
                           return true;
@@ -329,7 +329,7 @@ class WindowViewer extends Component {
                             </MiradorMenuButton>
                           )}
                         </div>
-                      </p>
+                      </div>
                     )
                   );
                 })
