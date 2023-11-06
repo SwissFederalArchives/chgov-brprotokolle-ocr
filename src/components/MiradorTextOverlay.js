@@ -17,7 +17,7 @@ class MiradorTextOverlay extends Component {
 
     this.renderRefs = [React.createRef(), React.createRef()];
     this.containerRef = React.createRef();
-    this.osdUpdateViewportHandler = () => {};
+    this.osdUpdateViewportHandler = this.onUpdateViewport.bind(this);
   }
 
   /** Register OpenSeadragon callback on initial mount */

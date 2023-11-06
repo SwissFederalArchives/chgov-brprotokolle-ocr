@@ -1,6 +1,6 @@
 {
   "name": "@4eyes/mirador-ocr-helper",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Mirador 3 plugin which renders a separate window, with OCR text",
   "main": "dist/index.js",
   "scripts": {
