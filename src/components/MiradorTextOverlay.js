@@ -17,6 +17,7 @@ class MiradorTextOverlay extends Component {
 
     this.renderRefs = [React.createRef(), React.createRef()];
     this.containerRef = React.createRef();
+    this.osdUpdateViewportHandler = () => {};
   }
 
   /** Register OpenSeadragon callback on initial mount */
@@ -24,9 +25,18 @@ class MiradorTextOverlay extends Component {
     const { enabled, viewer } = this.props;
 
     if (enabled && viewer) {
-      this.registerOsdCallback();
+      viewer.addHandler('update-viewport', this.osdUpdateViewportHandler);
     }
     this.patchAnnotationOverlay();
+  }
+
+  componentWillUnmount() {
+    const { viewer } = this.props;
+  
+    // Remove OpenSeadragon viewport update callback
+    if (viewer) {
+      viewer.removeHandler('update-viewport', this.osdUpdateViewportHandler);
+    }
   }
 
   /** Register OpenSeadragon callback when viewport changes */
@@ -39,7 +49,7 @@ class MiradorTextOverlay extends Component {
 
     // OSD instance becomes available, register callback
     if (enabled && viewer && viewer !== prevProps.viewer) {
-      this.registerOsdCallback();
+      viewer.addHandler('update-viewport', this.osdUpdateViewportHandler);
     }
     // Newly enabled, force initial setting of state from OSD
     const newlyEnabled =
@@ -174,12 +184,6 @@ class MiradorTextOverlay extends Component {
   shouldRender(props) {
     const { enabled, pageTexts } = props ?? this.props;
     return enabled && pageTexts.length > 0;
-  }
-
-  /** Update container dimensions and page scale/offset every time the OSD viewport changes. */
-  registerOsdCallback() {
-    const { viewer } = this.props;
-    viewer.addHandler('update-viewport', this.onUpdateViewport.bind(this));
   }
 
   /**

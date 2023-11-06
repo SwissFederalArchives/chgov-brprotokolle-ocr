@@ -126,6 +126,10 @@ class WindowViewer extends Component {
   }
 
   componentWillUnmount() {
+    // Clear the interval when the component is about to unmount
+    if (this.textPollInterval) {
+      clearInterval(this.textPollInterval);
+    }
     this.lineRefs = [];
   }
 
